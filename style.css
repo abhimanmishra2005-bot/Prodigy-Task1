@@ -1,0 +1,53 @@
+/* Custom styles to supplement Tailwind */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0a0a0a;
+    color: #e5e5e5;
+}
+
+/* Smooth transition for header background color */
+header {
+    transition: background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+/* Gradient text effect */
+.gradient-text {
+    background: linear-gradient(to right, #8a2be2, #4b0082);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+/* Animated underline for nav links */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #8a2be2; /* Violet color */
+    transition: width 0.3s ease;
+}
+.nav-link:hover {
+    color: #c792ea; /* Lighter violet on hover */
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Section styling */
+.content-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    border-bottom: 1px solid #27272a;
+}

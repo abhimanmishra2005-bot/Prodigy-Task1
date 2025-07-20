@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Landing Page</title>
+    
+    <!-- Tailwind CSS for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Link to your custom CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+
+    <!-- 
+      Header and Navigation Bar
+      - `fixed`: Keeps it at the top
+      - `w-full`: Makes it full width
+      - `top-0`, `left-0`: Positions it at the top-left corner
+      - `z-50`: Ensures it stays on top of other content
+    -->
+    <header id="main-header" class="fixed w-full top-0 left-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-bold text-white">
+                Prodigy<span class="gradient-text">.</span>
+            </a>
+            
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="nav-link text-gray-300">Home</a>
+                <a href="#about" class="nav-link text-gray-300">About</a>
+                <a href="#services" class="nav-link text-gray-300">Services</a>
+                <a href="#contact" class="nav-link text-gray-300">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Button (Hamburger) -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu (hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/80 backdrop-blur-sm">
+            <a href="#home" class="block py-2 px-4 text-sm text-gray-200 hover:bg-slate-800">Home</a>
+            <a href="#about" class="block py-2 px-4 text-sm text-gray-200 hover:bg-slate-800">About</a>
+            <a href="#services" class="block py-2 px-4 text-sm text-gray-200 hover:bg-slate-800">Services</a>
+            <a href="#contact" class="block py-2 px-4 text-sm text-gray-200 hover:bg-slate-800">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Section (Hero) -->
+        <section id="home" class="content-section" style="background-image: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 1)), url('https://placehold.co/1920x1080/0f0514/4a0e63?text='); background-size: cover; background-position: center;">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-4">
+                    Task-01: <span class="gradient-text">Responsive Landing Page</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+                    Scroll down to see the navigation bar change its appearance. Hover over the links for a cool effect.
+                </p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="content-section bg-gray-900">
+            <div class="text-center max-w-4xl">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">About Us</h2>
+                <p class="text-gray-400">
+                    This section is here to add some scrollable content to the page. As you scroll past the top hero section, the navigation bar at the top gets a solid background, making it easier to read against the content. This is a common and effective pattern in modern web design for maintaining visibility and context for the user.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="content-section">
+            <div class="text-center max-w-4xl">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
+                <p class="text-gray-400">
+                    This is another content block. The fixed navigation menu ensures that users can easily jump to any section of the page without having to scroll all the way back to the top. It provides a persistent and accessible way to navigate the site, improving the overall user experience.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="content-section bg-gray-900">
+            <div class="text-center max-w-4xl">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Contact Us</h2>
+                <p class="text-gray-400">
+                    This is the final section. The entire page is built to be responsive, meaning it will adapt its layout to look great on devices of all sizes, from large desktop monitors to small mobile phones. Try resizing your browser window to see it in action!
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-center py-4">
+        <p class="text-gray-500">&copy; 2025 Prodigy Infotech. All rights reserved.</p>
+    </footer>
+
+    <!-- Link to your JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>
